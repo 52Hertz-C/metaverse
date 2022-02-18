@@ -20,6 +20,7 @@
         <java.version>1.8</java.version>
         <metaverse.user.common.version>1.0.0</metaverse.user.common.version>
         <metaverse.user.service.version>1.0.0</metaverse.user.service.version>
+        <com.alibaba.fastjson.version>1.2.31</com.alibaba.fastjson.version>
     </properties>
 
     <parent>
@@ -67,6 +68,12 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${com.alibaba.fastjson.version}</version>
         </dependency>
     </dependencies>
 
