@@ -1,5 +1,6 @@
 package com.meta.user.common.domain.dto;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.util.Date;
@@ -13,21 +14,21 @@ import java.util.Date;
 @Data
 public class UserDTO {
 
-//    @ApiModelProperty("用户id")
+    @ApiModelProperty("用户id")
     private Long userId;
 
-//    @ApiModelProperty("用户名称")
+    @ApiModelProperty("用户名称")
     private String userName;
 
-//    @ApiModelProperty("年龄")
+    @ApiModelProperty("年龄")
     private Integer age;
 
-//    @ApiModelProperty("性别")
+    @ApiModelProperty("性别")
     private Integer gender;
 
-//    @ApiModelProperty("密码")
+    @ApiModelProperty("密码")
     private String password;
 
-//    @ApiModelProperty("出生日期")
+    @ApiModelProperty("出生日期")
     private Date birthDay;
 }
