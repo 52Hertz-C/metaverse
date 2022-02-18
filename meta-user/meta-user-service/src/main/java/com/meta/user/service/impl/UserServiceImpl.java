@@ -13,4 +13,8 @@ public class UserServiceImpl implements UserService {
         userDTO.setUserId(userId);
         return userDTO;
     }
+
+    @Override
+    public void updateUser(UserDTO userDTO) {
+    }
 }

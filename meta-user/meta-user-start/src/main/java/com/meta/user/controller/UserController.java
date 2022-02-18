@@ -1,5 +1,6 @@
 package com.meta.user.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.meta.user.common.domain.dto.UserDTO;
 import com.meta.user.service.UserService;
 import io.swagger.annotations.Api;
@@ -22,6 +23,13 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
+    @PutMapping(value = "/updateUser")
+    @ApiOperation(value = "获取用户信息", notes = "获取用户信息")
+    public void updateUser(@RequestBody UserDTO userDTO) {
+        log.info("updateUser param is: {}", JSON.toJSONString(userDTO));
+        userService.updateUser(userDTO);
+    }
 
     @GetMapping(value = "/getUser")
     @ApiOperation(value = "获取用户信息", notes = "获取用户信息")

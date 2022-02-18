@@ -1,5 +1,6 @@
 package com.meta.user.common.config.swagger;
 
+import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,8 +31,8 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.OAS_30)
                 .apiInfo(apiInfo())
                 .select()
-                //.apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
-                .apis(RequestHandlerSelectors.withMethodAnnotation(Operation.class))
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+//                .apis(RequestHandlerSelectors.withMethodAnnotation(Operation.class))
                 .paths(PathSelectors.any())
                 .build()
                 .globalRequestParameters(getGlobalRequestParameters())
@@ -53,10 +54,10 @@ public class SwaggerConfig {
     private List<RequestParameter> getGlobalRequestParameters() {
         List<RequestParameter> parameters = new ArrayList<>();
         parameters.add(new RequestParameterBuilder()
-                .name("uuid")
-                .description("设备uuid")
-                .required(true)
-                .in(ParameterType.QUERY)
+                .name("token")
+                .description("用户token")
+                .required(false)
+                .in(ParameterType.COOKIE)
                 .query(q -> q.model(m -> m.scalarModel(ScalarType.STRING)))
                 .required(false)
                 .build());
