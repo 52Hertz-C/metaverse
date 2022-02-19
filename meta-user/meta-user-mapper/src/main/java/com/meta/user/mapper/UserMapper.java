@@ -1,9 +1,7 @@
 package com.meta.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.meta.user.common.config.mybatis.cache.MybatisRedisCache;
-import com.meta.user.common.domain.User;
-import org.apache.ibatis.annotations.CacheNamespace;
+import com.meta.user.common.entity.User;
 
 /**
  * @program: metaverse

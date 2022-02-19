@@ -1,8 +1,8 @@
-package com.meta.user.common.domain;
+package com.meta.user.common.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.meta.user.common.domain.base.BaseEntity;
+import com.meta.user.common.entity.base.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -31,7 +31,7 @@ public class User extends BaseEntity {
     private Integer age;
 
     @TableField("gender")
-    private Integer gender;
+    private String gender;
 
     @TableField("password")
     private String password;

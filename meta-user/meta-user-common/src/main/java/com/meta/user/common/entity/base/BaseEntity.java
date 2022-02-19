@@ -1,4 +1,4 @@
-package com.meta.user.common.domain.base;
+package com.meta.user.common.entity.base;
 
 import com.meta.user.common.config.utils.DateUtils;
 

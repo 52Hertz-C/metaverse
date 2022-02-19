@@ -1,11 +1,8 @@
 package com.meta.user.dao.impl;
 
-import com.meta.user.common.config.utils.DateUtils;
-import com.meta.user.common.domain.User;
-import com.meta.user.common.pojo.dto.UserDTO;
+import com.meta.user.common.entity.User;
 import com.meta.user.dao.UserDao;
 import com.meta.user.mapper.UserMapper;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,10 +20,17 @@ public class UserDaoImpl implements UserDao {
     UserMapper userMapper;
 
     @Override
-    public void addUser(UserDTO userDTO) {
-        User user = new User();
-        BeanUtils.copyProperties(userDTO, user);
-        user.setCreateUserId(-1l);
+    public User getUser(Long userId) {
+        return userMapper.selectById(userId);
+    }
+
+    @Override
+    public void addUser(User user) {
         userMapper.insert(user);
+    }
+
+    @Override
+    public void updateUser(User user) {
+        userMapper.updateById(user);
     }
 }
