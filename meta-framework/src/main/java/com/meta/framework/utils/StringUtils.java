@@ -1,6 +1,6 @@
-package com.meta.user.common.config.utils;
+package com.meta.framework.utils;
 
-import com.meta.user.common.config.utils.text.StrFormatter;
+import com.meta.framework.utils.text.StrFormatter;
 
 import java.util.Collection;
 import java.util.Map;

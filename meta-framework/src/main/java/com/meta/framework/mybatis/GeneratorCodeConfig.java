@@ -1,4 +1,4 @@
-package com.meta.user.common.config.mybatis;
+package com.meta.framework.mybatis;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.TemplateConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-import com.meta.user.common.config.utils.StringUtils;
+import com.meta.framework.utils.StringUtils;
 
 import java.util.Scanner;
 

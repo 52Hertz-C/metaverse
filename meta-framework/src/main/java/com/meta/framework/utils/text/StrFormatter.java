@@ -1,6 +1,6 @@
-package com.meta.user.common.config.utils.text;
+package com.meta.framework.utils.text;
 
-import com.meta.user.common.config.utils.StringUtils;
+import com.meta.framework.utils.StringUtils;
 
 /**
  * 字符串格式化

@@ -1,6 +1,6 @@
 package com.meta.user.common.entity.base;
 
-import com.meta.user.common.config.utils.DateUtils;
+import com.meta.framework.utils.DateUtils;
 
 import java.io.Serializable;
 import java.util.Date;

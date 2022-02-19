@@ -1,4 +1,4 @@
-package com.meta.user.common.config.utils;
+package com.meta.framework.utils;
 
 import java.util.regex.Pattern;
 

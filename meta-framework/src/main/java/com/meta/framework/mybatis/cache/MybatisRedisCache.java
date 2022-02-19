@@ -1,6 +1,6 @@
-package com.meta.user.common.config.mybatis.cache;
+package com.meta.framework.mybatis.cache;
 
-import com.meta.user.common.context.ApplicationContextHolder;
+import com.meta.framework.context.ApplicationContextHolder;
 import org.apache.ibatis.cache.Cache;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

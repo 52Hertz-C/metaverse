@@ -1,6 +1,6 @@
 package com.meta.user.common.enums;
 
-import com.meta.user.common.config.utils.StringUtils;
+import com.meta.framework.utils.StringUtils;
 
 /**
  * @program: metaverse

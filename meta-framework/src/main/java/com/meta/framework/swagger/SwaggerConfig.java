@@ -1,7 +1,7 @@
-package com.meta.user.common.config.swagger;
+package com.meta.framework.swagger;
+
 
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -36,8 +36,8 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build()
                 .globalRequestParameters(getGlobalRequestParameters())
-                .globalResponses(HttpMethod.GET, getGlobalResonseMessage())
-                .globalResponses(HttpMethod.POST, getGlobalResonseMessage());
+                .globalResponses(HttpMethod.GET, getGlobalResponseMessage())
+                .globalResponses(HttpMethod.POST, getGlobalResponseMessage());
     }
 
     //生成接口信息，包括标题、联系人等
@@ -65,7 +65,7 @@ public class SwaggerConfig {
     }
 
     //生成通用响应信息
-    private List<Response> getGlobalResonseMessage() {
+    private List<Response> getGlobalResponseMessage() {
         List<Response> responseList = new ArrayList<>();
         responseList.add(new ResponseBuilder().code("404").description("找不到资源").build());
         return responseList;

@@ -1,6 +1,6 @@
-package com.meta.user.common.config.utils.text;
+package com.meta.framework.utils.text;
 
-import com.meta.user.common.config.utils.StringUtils;
+import com.meta.framework.utils.StringUtils;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
