@@ -1,2 +1,17 @@
 server:
   port: 12345
+
+#数据库配置:
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/metaverse?serverTimezone=GMT&useSSL=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:com/meta/user/mapper/*.xml
+  type-aliases-package: com.meta.user.common.domain
+  # 驼峰命名规范
+  configuration:
+    map-underscore-to-camel-case: true

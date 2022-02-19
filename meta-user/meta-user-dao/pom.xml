@@ -9,26 +9,23 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.meta.user</groupId>
-    <artifactId>meta-user-service</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>com.meta.user</groupId>
-            <artifactId>meta-user-common</artifactId>
-            <version>1.0.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.meta.user</groupId>
-            <artifactId>meta-user-dao</artifactId>
-            <version>1.0.0</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+    <artifactId>meta-user-dao</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.meta.user</groupId>
+            <artifactId>meta-user-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.meta.user</groupId>
+            <artifactId>meta-user-mapper</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

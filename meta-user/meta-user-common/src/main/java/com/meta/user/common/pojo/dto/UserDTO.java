@@ -1,4 +1,4 @@
-package com.meta.user.common.domain.dto;
+package com.meta.user.common.pojo.dto;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -30,5 +30,5 @@ public class UserDTO {
     private String password;
 
     @ApiModelProperty("出生日期")
-    private Date birthDay;
+    private Date birthday;
 }
