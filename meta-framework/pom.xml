@@ -7,7 +7,7 @@
     <groupId>com.meta</groupId>
     <artifactId>meta-framework</artifactId>
     <version>1.0.0</version>
-    <packaging>pom</packaging>
+<!--    <packaging>pom</packaging>-->
 
     <parent>
         <groupId>com.meta</groupId>

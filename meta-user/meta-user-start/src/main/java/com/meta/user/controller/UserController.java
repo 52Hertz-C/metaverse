@@ -8,6 +8,8 @@ import com.meta.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,9 +21,10 @@ import org.springframework.web.bind.annotation.*;
  **/
 @RestController
 @RequestMapping
-@Slf4j
 @Api(tags = "用户信息管理接口")
 public class UserController {
+
+    final static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     UserService userService;
@@ -29,14 +32,14 @@ public class UserController {
     @GetMapping(value = "/getUser")
     @ApiOperation(value = "获取用户信息", notes = "获取用户信息")
     public DataResponse<UserInfoDTO> getUser(@RequestParam("userId") Long userId) {
-        log.info("getUser param is: {}", userId);
+        logger.info("getUser param is: {}", userId);
         return DataResponse.success(userService.getUser(userId));
     }
 
     @PostMapping(value = "/createUser")
     @ApiOperation(value = "创建用户", notes = "创建用户")
     public DataResponse<Void> createUser(@RequestBody UserDTO userDTO) {
-        log.info("createUser param is: {}", JSON.toJSONString(userDTO));
+        logger.info("createUser param is: {}", JSON.toJSONString(userDTO));
         userService.createUser(userDTO);
         return DataResponse.success();
     }
@@ -44,7 +47,7 @@ public class UserController {
     @PutMapping(value = "/updateUser")
     @ApiOperation(value = "更新用户信息", notes = "更新用户信息")
     public DataResponse<Void> updateUser(@RequestBody UserDTO userDTO) {
-        log.info("updateUser param is: {}", JSON.toJSONString(userDTO));
+        logger.info("updateUser param is: {}", JSON.toJSONString(userDTO));
         userService.updateUser(userDTO);
         return DataResponse.success();
     }

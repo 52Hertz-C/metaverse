@@ -1,7 +1,6 @@
 package com.meta.user.pojo.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.meta.user.common.enums.GenderEnum;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 

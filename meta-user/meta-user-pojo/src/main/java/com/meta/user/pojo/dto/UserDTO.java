@@ -1,6 +1,5 @@
 package com.meta.user.pojo.dto;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.meta.user.common.enums.GenderEnum;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
