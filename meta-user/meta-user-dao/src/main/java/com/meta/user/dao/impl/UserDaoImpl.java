@@ -1,10 +1,13 @@
 package com.meta.user.dao.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.meta.user.common.entity.User;
 import com.meta.user.dao.UserDao;
 import com.meta.user.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @program: metaverse
@@ -22,6 +25,14 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User getUser(Long userId) {
         return userMapper.selectById(userId);
+    }
+
+    @Override
+    public List<User> getUserByUserName(String userName) {
+        QueryWrapper qw = new QueryWrapper();
+        qw.eq("userName", userName);
+        qw.eq("deleted", Boolean.FALSE);
+        return userMapper.selectList(qw);
     }
 
     @Override

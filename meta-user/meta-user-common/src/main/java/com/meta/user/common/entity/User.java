@@ -27,6 +27,9 @@ public class User extends BaseEntity {
     @TableField("user_name")
     private String userName;
 
+    @TableField("nick_name")
+    private String nickName;
+
     @TableField("age")
     private Integer age;
 
@@ -38,4 +41,10 @@ public class User extends BaseEntity {
 
     @TableField("birthday")
     private Date birthday;
+
+    @TableField("mobile")
+    private String mobile;
+
+    @TableField("email")
+    private String email;
 }

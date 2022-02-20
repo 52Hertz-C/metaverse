@@ -1,5 +1,6 @@
 package com.meta.user.common.pojo.dto;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.meta.user.common.enums.GenderEnum;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -21,6 +22,9 @@ public class UserDTO {
     @ApiModelProperty("用户名称")
     private String userName;
 
+    @ApiModelProperty("昵称")
+    private String nickName;
+
     @ApiModelProperty("年龄")
     private Integer age;
 
@@ -32,4 +36,10 @@ public class UserDTO {
 
     @ApiModelProperty("出生日期")
     private Date birthday;
+
+    @ApiModelProperty("手机")
+    private String mobile;
+
+    @ApiModelProperty("邮箱")
+    private String email;
 }

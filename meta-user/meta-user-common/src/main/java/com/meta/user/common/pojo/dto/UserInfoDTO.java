@@ -22,6 +22,9 @@ public class UserInfoDTO {
     @ApiModelProperty("用户名称")
     private String userName;
 
+    @ApiModelProperty("昵称")
+    private String nickName;
+
     @ApiModelProperty("年龄")
     private Integer age;
 
@@ -34,4 +37,10 @@ public class UserInfoDTO {
     @ApiModelProperty("出生日期")
     @JsonFormat(shape = JsonFormat.Shape.STRING , pattern = "yyyy-MM-dd")
     private Date birthday;
+
+    @ApiModelProperty("手机")
+    private String mobile;
+
+    @ApiModelProperty("邮箱")
+    private String email;
 }

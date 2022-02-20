@@ -2,6 +2,8 @@ package com.meta.user.dao;
 
 import com.meta.user.common.entity.User;
 
+import java.util.List;
+
 /**
  * @program: metaverse
  * @description:
@@ -12,6 +14,8 @@ import com.meta.user.common.entity.User;
 public interface UserDao {
 
     User getUser(Long userId);
+
+    List<User> getUserByUserName(String userName);
 
     void addUser(User user);
 
