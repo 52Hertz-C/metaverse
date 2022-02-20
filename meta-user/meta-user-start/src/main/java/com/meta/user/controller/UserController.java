@@ -1,9 +1,9 @@
 package com.meta.user.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.meta.user.common.entity.response.DataResponse;
-import com.meta.user.common.pojo.dto.UserDTO;
-import com.meta.user.common.pojo.dto.UserInfoDTO;
+import com.meta.user.pojo.dto.UserDTO;
+import com.meta.user.pojo.dto.UserInfoDTO;
+import com.meta.user.pojo.response.DataResponse;
 import com.meta.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -33,11 +33,11 @@ public class UserController {
         return DataResponse.success(userService.getUser(userId));
     }
 
-    @PostMapping(value = "/addUser")
+    @PostMapping(value = "/createUser")
     @ApiOperation(value = "创建用户", notes = "创建用户")
-    public DataResponse<Void> addUser(@RequestBody UserDTO userDTO) {
-        log.info("addUser param is: {}", JSON.toJSONString(userDTO));
-        userService.addUser(userDTO);
+    public DataResponse<Void> createUser(@RequestBody UserDTO userDTO) {
+        log.info("createUser param is: {}", JSON.toJSONString(userDTO));
+        userService.createUser(userDTO);
         return DataResponse.success();
     }
 

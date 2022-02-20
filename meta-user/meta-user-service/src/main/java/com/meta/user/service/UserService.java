@@ -1,12 +1,12 @@
 package com.meta.user.service;
 
-import com.meta.user.common.pojo.dto.UserDTO;
-import com.meta.user.common.pojo.dto.UserInfoDTO;
+import com.meta.user.pojo.dto.UserDTO;
+import com.meta.user.pojo.dto.UserInfoDTO;
 
 public interface UserService {
     UserInfoDTO getUser(Long userId);
 
-    void addUser(UserDTO userDTO);
+    void createUser(UserDTO userDTO);
 
     void updateUser(UserDTO userDTO);
 }

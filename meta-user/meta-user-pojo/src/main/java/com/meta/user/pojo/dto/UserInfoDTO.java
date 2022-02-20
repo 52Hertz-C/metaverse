@@ -1,6 +1,6 @@
-package com.meta.user.common.pojo.dto;
+package com.meta.user.pojo.dto;
 
-import com.baomidou.mybatisplus.annotation.TableField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.meta.user.common.enums.GenderEnum;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -14,7 +14,7 @@ import java.util.Date;
  * @create: 2022-02-17 11:33
  **/
 @Data
-public class UserDTO {
+public class UserInfoDTO {
 
     @ApiModelProperty("用户id")
     private Long userId;
@@ -29,12 +29,13 @@ public class UserDTO {
     private Integer age;
 
     @ApiModelProperty("性别")
-    private GenderEnum gender;
+    private String gender;
 
     @ApiModelProperty("密码")
     private String password;
 
     @ApiModelProperty("出生日期")
+    @JsonFormat(shape = JsonFormat.Shape.STRING , pattern = "yyyy-MM-dd")
     private Date birthday;
 
     @ApiModelProperty("手机")

@@ -1,4 +1,4 @@
-package com.meta.user.common.entity.base;
+package com.meta.user.pojo.entity.base;
 
 import com.meta.framework.utils.DateUtils;
 

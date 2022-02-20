@@ -1,6 +1,6 @@
 package com.meta.user.common.enums.code;
 
-import com.qiaofang.common.exception.BusinessException;
+import com.meta.user.common.exception.BusinessException;
 
 /**
  * { DESCRIBE HERE }
@@ -10,10 +10,8 @@ import com.qiaofang.common.exception.BusinessException;
  */
 public enum UserResponseCode {
 
-    LOCAL_ROOM_NOT_EXISTS("loupan_local_room_not_exists", "房号不存在"),
-
-
-    ROOM_SQUARE_BUILDING_MUST_GT_INTERNAL("LOUPAN_ROOM_SQUARE_BUILDING_MUST_GT_INTERNAL", "建筑面积必须大于等于套内面积");
+    USER_NOT_EXISTS("user_not_exists_101", "用户不存在"),
+    USER_PARAMS_ERROR("user_params_error_102", "用户参数错误");
     ;
 
     UserResponseCode(String code, String message) {

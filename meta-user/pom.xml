@@ -22,6 +22,7 @@
         <module>meta-user-common</module>
         <module>meta-user-dao</module>
         <module>meta-user-mapper</module>
+        <module>meta-user-pojo</module>
     </modules>
 
     <properties>

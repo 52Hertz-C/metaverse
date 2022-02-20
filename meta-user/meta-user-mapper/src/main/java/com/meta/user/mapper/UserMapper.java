@@ -1,7 +1,7 @@
 package com.meta.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.meta.user.common.entity.User;
+import com.meta.user.pojo.entity.User;
 
 /**
  * @program: metaverse

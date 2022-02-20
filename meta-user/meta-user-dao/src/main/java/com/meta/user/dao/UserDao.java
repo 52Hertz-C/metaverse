@@ -1,6 +1,6 @@
 package com.meta.user.dao;
 
-import com.meta.user.common.entity.User;
+import com.meta.user.pojo.entity.User;
 
 import java.util.List;
 

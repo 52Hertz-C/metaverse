@@ -1,9 +1,9 @@
 package com.meta.user.dao.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.meta.user.common.entity.User;
 import com.meta.user.dao.UserDao;
 import com.meta.user.mapper.UserMapper;
+import com.meta.user.pojo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

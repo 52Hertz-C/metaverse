@@ -1,4 +1,4 @@
-package com.meta.user.common.entity.response;
+package com.meta.user.pojo.response;
 
 import com.meta.user.common.enums.ResponseEnum;
 
